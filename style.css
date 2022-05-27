@@ -1,0 +1,91 @@
+:root{
+    /*Colores*/
+    --black: #000;
+    --white: #fff;
+    --light-black: #1c1c1c;
+    --green: #A2D200;
+    --blue: #0b04ba;
+}
+
+*{
+    box-sizing: border-box; /*Agrega ciertos estilos al renderizar el navegador*/
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%; /*Para utilizar rem (medida relativa en vez de px)*/
+    font-family: 'DM Sans', sans-serif;
+}
+
+main{
+    width: 100%;
+    height: 100vh;
+    background-color: var(--light-black);
+}
+
+.container-projects{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.item-project{
+    width: 250px;
+    height: 250px;
+    padding: 20px 10px;
+    position: relative;
+}
+
+.project-status{
+    width: 100px;
+    height: 30px;
+    color: var(--white);
+    border-radius: 5px;
+    text-align: center;
+    padding: 8px 0 0 0;
+    position: absolute;
+    left: calc(50% - 50px);
+    top: 5px;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+.item-project .in-process{
+    background-color: var(--blue);
+}
+
+.item-project .finish{
+    background-color: var(--green);
+}
+
+.box-project{
+    background-color: var(--white);
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.used-technologies{
+    font-size: 1.3rem;
+}
+
+.link-project{
+    width: 30px;
+    height: 30px;
+    background-color: #f3eb0421 ;
+    border-radius: 50%;
+    border: 1px solid #f3eb04;
+    text-align: center;
+    padding: 6px;
+    font-size: 1.3rem;
+    text-decoration: none;
+    font-weight: 700;
+    color: var(--black);
+}
