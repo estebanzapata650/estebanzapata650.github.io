@@ -3,8 +3,12 @@
     --black: #000;
     --white: #fff;
     --light-black: #1c1c1c;
-    --green: #A2D200;
-    --blue: #0b04ba;
+    --gray: #CCD5E0;
+    --green: #2fa499;
+    --blue: #2c98f0;
+    --yellow: #f9bf3f;
+    --red: #ec5453;
+    --purple: #a84cb8;
 }
 
 *{
@@ -21,10 +25,41 @@ html{
 main{
     width: 100%;
     height: 100vh;
-    background-color: var(--light-black);
+    background-color: var(--white);
+}
+
+.heading {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 40px;
+    z-index: 2;
+    line-height: 1.1;
+}
+
+.heading-title {
+    position: absolute;
+    font-size: 3.8rem;
+    font-weight: 500;
+    line-height: 5.4rem;
+    color: var(--light-black);
+    top: 10px;
+    padding-left: 2px;
+}
+
+.heading-title-ghost{
+    font-size: 3.8rem;
+    font-weight: 500;
+    line-height: 4.4rem;
+    color: var(--gray);
+    
 }
 
 .container-projects{
+    display: flex;
+    flex-direction: column;
+}
+
+.container-projects .container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -43,7 +78,7 @@ main{
     color: var(--white);
     border-radius: 5px;
     text-align: center;
-    padding: 8px 0 0 0;
+    padding: 8px 0 8px 0;
     position: absolute;
     left: calc(50% - 50px);
     top: 5px;
@@ -52,11 +87,15 @@ main{
 }
 
 .item-project .in-process{
-    background-color: var(--blue);
+    background-color: var(--red);
 }
 
 .item-project .finish{
     background-color: var(--green);
+}
+
+.item-project .finishBusiness{
+    background-color: var(--blue);
 }
 
 .box-project{
@@ -69,7 +108,10 @@ main{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    box-shadow: 0px 9px 31px -11px rgb(0 0 0 / 75%);
+    border-bottom: 3px solid var(--yellow);
 }
 
 .used-technologies{
@@ -77,15 +119,6 @@ main{
 }
 
 .link-project{
-    width: 30px;
-    height: 30px;
-    background-color: #f3eb0421 ;
-    border-radius: 50%;
-    border: 1px solid #f3eb04;
-    text-align: center;
-    padding: 6px;
-    font-size: 1.3rem;
     text-decoration: none;
-    font-weight: 700;
-    color: var(--black);
+    color: inherit;
 }
